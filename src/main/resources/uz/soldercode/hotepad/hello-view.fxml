@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uz.soldercode.hotepad.HelloController">
+
+    <top>
+        <MenuBar>
+            <!-- FAYL -->
+            <Menu text="Fayl">
+                <MenuItem fx:id="yangiFayl" onAction="#yangiFaylYaratish" text="Yangi">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/new.png"/></image></ImageView></graphic>
+                </MenuItem>
+                <MenuItem fx:id="ochish" onAction="#faylOchish" text="Ochish...">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/open.png"/></image></ImageView></graphic>
+                </MenuItem>
+                <MenuItem fx:id="saqlash" onAction="#faylSaqlash" text="Saqlash">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/save.png"/></image></ImageView></graphic>
+                </MenuItem>
+                <MenuItem fx:id="saqlashBoshqa" onAction="#faylSaqlashBoshqa" text="Boshqa nomdagi saqlash...">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/save.png"/></image></ImageView></graphic>
+                </MenuItem>
+                <SeparatorMenuItem/>
+                <MenuItem onAction="#chop" text="Chop etish...">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/print.png"/></image></ImageView></graphic>
+                </MenuItem>
+                <SeparatorMenuItem/>
+                <MenuItem fx:id="chiqish" onAction="#dasturniYopish" text="Chiqish">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/exit.png"/></image></ImageView></graphic>
+                </MenuItem>
+            </Menu>
+
+            <!-- TAHRIRLASH -->
+            <Menu text="Tahrirlash">
+                <MenuItem onAction="#bekorQilish" text="Bekor qilish">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/undo.png"/></image></ImageView></graphic>
+                </MenuItem>
+                <MenuItem onAction="#qaytarish" text="Qaytarish">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/redo.png"/></image></ImageView></graphic>
+                </MenuItem>
+                <SeparatorMenuItem/>
+                <MenuItem fx:id="kesish" onAction="#matnKesish" text="Kesish">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/cut.png"/></image></ImageView></graphic>
+                </MenuItem>
+                <MenuItem fx:id="nusxalash" onAction="#matnNusxalash" text="Nusxalash">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/copy.png"/></image></ImageView></graphic>
+                </MenuItem>
+                <MenuItem fx:id="qoyish" onAction="#matnQoyish" text="Qo'yish">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/paste.png"/></image></ImageView></graphic>
+                </MenuItem>
+                <MenuItem onAction="#qatorOchirish" text="O'chirish">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/delete.png"/></image></ImageView></graphic>
+                </MenuItem>
+                <SeparatorMenuItem/>
+                <MenuItem fx:id="topish" onAction="#topish" text="Topish...">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/find.png"/></image></ImageView></graphic>
+                </MenuItem>
+                <MenuItem fx:id="almashtirish" onAction="#almashtirish" text="Almashtirish...">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/replace.png"/></image></ImageView></graphic>
+                </MenuItem>
+                <SeparatorMenuItem/>
+                <MenuItem fx:id="hammasiniTanlash" onAction="#hammasiniTanlash" text="Hammasini tanlash"/>
+                <MenuItem fx:id="sanaSoat" onAction="#sanaSoatKiritish" text="Sana/Soat">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/time.png"/></image></ImageView></graphic>
+                </MenuItem>
+
+                <SeparatorMenuItem/>
+                <MenuItem fx:id="shriftTanlash" onAction="#shriftTanlash" text="Shrift...">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/font.png"/></image></ImageView></graphic>
+                </MenuItem>
+            </Menu>
+
+            <!-- YORDAM -->
+            <Menu text="Yordam">
+                <MenuItem fx:id="yordim" onAction="#yordamKorsatish" text="Yordam ma'lumotlari">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/help.png"/></image></ImageView></graphic>
+                </MenuItem>
+                <MenuItem fx:id="haqida" onAction="#haqidaMalumot" text="Dastur haqida">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/info.png"/></image></ImageView></graphic>
+                </MenuItem>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TextArea fx:id="matnMaydoni" wrapText="true" style="-fx-font-family: 'Consolas'; -fx-font-size: 14px;"/>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" style="-fx-padding: 5; -fx-background-color: #f0f0f0;">
+            <Label fx:id="statusLabel" text="Yangi fayl | Qatorlar: 0 | Belgilar: 0"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
