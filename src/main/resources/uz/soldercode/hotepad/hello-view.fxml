@@ -10,7 +10,6 @@
 
     <top>
         <MenuBar>
-            <!-- FAYL -->
             <Menu text="Fayl">
                 <MenuItem fx:id="yangiFayl" onAction="#yangiFaylYaratish" text="Yangi">
                     <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/new.png"/></image></ImageView></graphic>
@@ -25,6 +24,9 @@
                     <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/save.png"/></image></ImageView></graphic>
                 </MenuItem>
                 <SeparatorMenuItem/>
+                <MenuItem fx:id="pageSettings" onAction="#sahifaSozlamalari" text="Sahifa sozlamalari...">
+                    <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/print.png"/></image></ImageView></graphic>
+                </MenuItem>
                 <MenuItem onAction="#chop" text="Chop etish...">
                     <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/print.png"/></image></ImageView></graphic>
                 </MenuItem>
@@ -34,7 +36,6 @@
                 </MenuItem>
             </Menu>
 
-            <!-- TAHRIRLASH -->
             <Menu text="Tahrirlash">
                 <MenuItem onAction="#bekorQilish" text="Bekor qilish">
                     <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/undo.png"/></image></ImageView></graphic>
@@ -67,14 +68,19 @@
                 <MenuItem fx:id="sanaSoat" onAction="#sanaSoatKiritish" text="Sana/Soat">
                     <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/time.png"/></image></ImageView></graphic>
                 </MenuItem>
+            </Menu>
 
-                <SeparatorMenuItem/>
+            <Menu text="Format">
+                <CheckMenuItem fx:id="wordWrapMenu" onAction="#wordWrapToggle" text="Word Wrap" selected="true"/>
                 <MenuItem fx:id="shriftTanlash" onAction="#shriftTanlash" text="Shrift...">
                     <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/font.png"/></image></ImageView></graphic>
                 </MenuItem>
             </Menu>
 
-            <!-- YORDAM -->
+            <Menu text="Ko'rinish">
+                <CheckMenuItem fx:id="statusBarMenu" onAction="#statusBarToggle" text="Status Bar" selected="true"/>
+            </Menu>
+
             <Menu text="Yordam">
                 <MenuItem fx:id="yordim" onAction="#yordamKorsatish" text="Yordam ma'lumotlari">
                     <graphic><ImageView fitHeight="16" fitWidth="16"><image><Image url="@../../../images/help.png"/></image></ImageView></graphic>
@@ -91,7 +97,7 @@
     </center>
 
     <bottom>
-        <HBox spacing="10" style="-fx-padding: 5; -fx-background-color: #f0f0f0;">
+        <HBox fx:id="statusBar" spacing="10" style="-fx-padding: 5; -fx-background-color: #f0f0f0;">
             <Label fx:id="statusLabel" text="Yangi fayl | Qatorlar: 0 | Belgilar: 0"/>
         </HBox>
     </bottom>
